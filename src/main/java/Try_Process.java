@@ -1,9 +1,10 @@
 import processing.core.PApplet;
 public class Try_Process extends PApplet {
-    Ellipse e1;
-    Ellipse e2;
-    Ellipse e3;
-    Ellipse e4;
+    public int height=500;
+    int x=0;
+    int y=0;
+    int z=0;
+    int c=0;
 
     public static void main(String args[]) {
 
@@ -18,18 +19,36 @@ public class Try_Process extends PApplet {
     public void setup()
     {
 
-        e1=new Ellipse(this,1);
-        e2=new Ellipse(this,2);
-        e3=new Ellipse(this,3);
-        e4=new Ellipse(this,4);
+
 
         }
     public void draw() {
-        e1.firstellipse();
-        e2.secondellipse();
-        e3.thirdellipse();
-        e4.fourthellipse();
+        firstellipse();
+        secondellipse();
+        thirdellipse();
+        fourthellipse();
 
     }
+    public void firstellipse()
+    {
+        ellipse(x,height/5,20,20);
+        x=x+1;
+    }
+    public void secondellipse()
+    {
+        ellipse(y,2*height/5,20,20);
+       y=y+2;
+    }
+    public void thirdellipse()
+    {
+        ellipse(z,3*height/5,20,20);
+        z=z+3;
+    }
+    public void fourthellipse()
+    {
+        ellipse(c,4*height/5,20,20);
+        c=c+4;
+    }
+
 
 }
